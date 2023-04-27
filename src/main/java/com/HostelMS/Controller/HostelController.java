@@ -18,7 +18,7 @@ public class HostelController {
     @Autowired
     private HostelRepository hostelRepository;
 
-    @GetMapping("/hostelsed")
+    @GetMapping("/hostels")
     public List<Hostels> getAllDetails() {
         return hostelService.getAllDetails();
     }
