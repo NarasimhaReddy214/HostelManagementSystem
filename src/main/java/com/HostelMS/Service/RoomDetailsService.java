@@ -16,6 +16,10 @@ public class RoomDetailsService {
     @Autowired
     private RoomDetailsRepository roomDetailsRepository;
 
+    public List<RoomDetails> getAllRoomDetails(){
+        return roomDetailsRepository.findAll();
+    }
+
     public RoomDetails getRoomDetailsById(int id){
         return roomDetailsRepository.findById(id)
                 .orElseThrow(()->new ResourceNotFoundException("Room details does not exist with the id :"+id));
